@@ -34,4 +34,4 @@ text here
 
 ## Sketch-up
 
-![Sketchup](RAW Data/Images/Sketchup.png)
+![Sketchup](https://github.com/ryanwinn33/project2/blob/jasminwork/RAW%20Data/Images/Sketchup.png?raw=true)
