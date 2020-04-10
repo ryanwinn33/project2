@@ -3,11 +3,13 @@
 ## Team: 
 
 Jasmin Schaefer, Shaun Ramirez, Ryan Winn, Spencer LaFarge
+
 ---
 
 ## Introduction:
 
 text here
+
 ---
 
 ## Datasets: 
