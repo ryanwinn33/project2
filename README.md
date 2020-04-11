@@ -8,7 +8,7 @@ Jasmin Schaefer, Shaun Ramirez, Ryan Winn, Spencer LaFarge
 
 ## Introduction:
 
-text here
+Our group would like to look at data on FEMA responses in the United States to determine where people have experienced more natural disasters than others, the severity of the disaster, and how those states trend over recent years. It is important information for people living in high risk states, or who plan to move their family or business to those states to know what kind of weather phenomenon they could experience in order to be best prepared. This analysis would be useful in determining how much the federal government could expect to spend on future natural disasters, it would highlight which local governments are most at risk for a particular disaster to develop appropriate preparedness programs, and would allow individuals to prepare their own emergency supplies in the event they should need them. 
 
 ---
 
