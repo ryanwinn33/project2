@@ -36,6 +36,10 @@ text here
 
 ![Sketchup](https://github.com/ryanwinn33/project2/blob/jasminwork/RAW%20Data/Images/Sketchup.png?raw=true)
 
+
+## <insert Intro here>
+
+
 ## Dashboard:
 Data will be displayed on a choropleth map with various layers representing the total number and cost of specific natural disasters in the United States, per FEMA data. Data can be filtered by year, for up to three years (2017 - 2019) and by disaster type (i.e., tornados, hurricanes, and earthquakes). Our dashboard will contain the following features: A map of the filtered data, pop-ups of specific state data for disaster cost and quantity, a line graph showing month over month cost for the year, and total obligated cost for that year (see Sketchup).
 
