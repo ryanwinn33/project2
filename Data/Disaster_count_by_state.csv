@@ -1,0 +1,170 @@
+Year,state,incidentType,disasterNumber
+2016,Alabama,Severe Storm(s),759
+2016,Alaska,Severe Storm(s),6
+2016,Arkansas,Severe Storm(s),482
+2016,Delaware,Snow,26
+2016,District of Columbia,Snow,64
+2016,Florida,Hurricane,1630
+2016,Georgia,Hurricane,545
+2016,Georgia,Severe Storm(s),259
+2016,Hawaii,Mud/Landslide,23
+2016,Idaho,Severe Storm(s),17
+2016,Iowa,Flood,455
+2016,Kansas,Severe Storm(s),149
+2016,Kentucky,Severe Storm(s),189
+2016,Louisiana,Flood,2608
+2016,Maryland,Flood,46
+2016,Maryland,Snow,497
+2016,Minnesota,Flood,278
+2016,Mississippi,Flood,313
+2016,Mississippi,Severe Storm(s),113
+2016,Missouri,Flood,808
+2016,Montana,Severe Storm(s),33
+2016,Montana,Tornado,14
+2016,New Jersey,Severe Storm(s),1035
+2016,North Carolina,Hurricane,1993
+2016,Oklahoma,Flood,84
+2016,Oklahoma,Severe Storm(s),398
+2016,Oregon,Severe Storm(s),420
+2016,Pennsylvania,Flood,172
+2016,Pennsylvania,Snow,1223
+2016,South Carolina,Hurricane,1130
+2016,Tennessee,Fire,44
+2016,Texas,Flood,1914
+2016,Texas,Severe Storm(s),366
+2016,Virginia,Hurricane,156
+2016,Virginia,Snow,222
+2016,Washington,Flood,157
+2016,Washington,Severe Storm(s),207
+2016,West Virginia,Flood,2073
+2016,Wisconsin,Flood,307
+2016,Wisconsin,Severe Storm(s),223
+2017,Alabama,Hurricane,131
+2017,Alaska,Severe Storm(s),19
+2017,Arkansas,Severe Storm(s),524
+2017,California,Fire,349
+2017,California,Flood,2160
+2017,California,Severe Storm(s),1076
+2017,Florida,Hurricane,12364
+2017,Georgia,Hurricane,1751
+2017,Georgia,Severe Storm(s),79
+2017,Georgia,Tornado,180
+2017,Idaho,Flood,360
+2017,Iowa,Severe Storm(s),117
+2017,Kansas,Severe Ice Storm,141
+2017,Kansas,Severe Storm(s),86
+2017,Kansas,Snow,142
+2017,Louisiana,Hurricane,212
+2017,Mississippi,Hurricane,168
+2017,Mississippi,Severe Storm(s),103
+2017,Mississippi,Tornado,61
+2017,Missouri,Flood,1102
+2017,Nebraska,Severe Storm(s),118
+2017,Nevada,Severe Storm(s),275
+2017,New Hampshire,Severe Storm(s),129
+2017,New Mexico,Flood,150
+2017,New York,Flood,171
+2017,New York,Snow,723
+2017,North Dakota,Flood,149
+2017,Oklahoma,Severe Storm(s),344
+2017,Oklahoma,Tornado,130
+2017,Oregon,Severe Storm(s),107
+2017,Puerto Rico,Hurricane,3415
+2017,South Carolina,Hurricane,284
+2017,South Dakota,Severe Storm(s),137
+2017,Tennessee,Severe Storm(s),147
+2017,Texas,Hurricane,6282
+2017,Utah,Flood,52
+2017,Vermont,Severe Storm(s),174
+2017,Virgin Islands of the U.S.,Hurricane,1064
+2017,Washington,Flood,317
+2017,West Virginia,Severe Storm(s),274
+2017,Wisconsin,Severe Storm(s),464
+2017,Wyoming,Flood,64
+2017,Wyoming,Severe Storm(s),13
+2018,Alabama,Hurricane,119
+2018,Alabama,Severe Storm(s),111
+2018,Alaska,Coastal Storm,13
+2018,American Samoa,Hurricane,103
+2018,Arizona,Flood,4
+2018,Arizona,Severe Storm(s),8
+2018,California,Fire,604
+2018,Connecticut,Severe Storm(s),28
+2018,Connecticut,Tornado,137
+2018,Florida,Hurricane,952
+2018,Georgia,Hurricane,511
+2018,Guam,Typhoon,66
+2018,Hawaii,Flood,88
+2018,Hawaii,Hurricane,53
+2018,Hawaii,Volcano,51
+2018,Indiana,Flood,340
+2018,Iowa,Severe Storm(s),449
+2018,Kansas,Severe Storm(s),102
+2018,Kentucky,Flood,647
+2018,Maine,Coastal Storm,56
+2018,Maine,Severe Storm(s),650
+2018,Maryland,Flood,109
+2018,Maryland,Severe Storm(s),70
+2018,Massachusetts,Severe Storm(s),391
+2018,Massachusetts,Snow,376
+2018,Michigan,Flood,158
+2018,Minnesota,Flood,638
+2018,Montana,Flood,112
+2018,Nebraska,Severe Storm(s),60
+2018,Nebraska,Snow,43
+2018,New Hampshire,Coastal Storm,33
+2018,New Hampshire,Severe Storm(s),257
+2018,New Hampshire,Snow,96
+2018,New Jersey,Severe Storm(s),413
+2018,New York,Flood,141
+2018,North Carolina,Hurricane,2354
+2018,Northern Mariana Islands,Typhoon,187
+2018,Ohio,Flood,1126
+2018,Oklahoma,Fire,41
+2018,Pennsylvania,Severe Storm(s),653
+2018,South Carolina,Hurricane,495
+2018,Vermont,Severe Storm(s),167
+2018,Virginia,Hurricane,388
+2018,Washington,Flood,6
+2018,West Virginia,Mud/Landslide,124
+2018,West Virginia,Severe Storm(s),67
+2018,Wisconsin,Flood,915
+2019,Alabama,Severe Storm(s),156
+2019,Alabama,Tornado,17
+2019,Alaska,Earthquake,218
+2019,Arkansas,Flood,248
+2019,California,Severe Storm(s),329
+2019,Florida,Hurricane,40
+2019,Guam,Typhoon,17
+2019,Idaho,Flood,41
+2019,Illinois,Flood,174
+2019,Iowa,Flood,727
+2019,Kansas,Severe Storm(s),114
+2019,Kentucky,Severe Storm(s),696
+2019,Louisiana,Flood,21
+2019,Louisiana,Hurricane,142
+2019,Louisiana,Severe Storm(s),42
+2019,Minnesota,Flood,706
+2019,Mississippi,Severe Storm(s),556
+2019,Missouri,Flood,138
+2019,Missouri,Severe Storm(s),180
+2019,Montana,Flood,38
+2019,Nebraska,Flood,942
+2019,New Hampshire,Severe Storm(s),4
+2019,North Carolina,Hurricane,370
+2019,North Dakota,Flood,147
+2019,Ohio,Flood,348
+2019,Ohio,Tornado,47
+2019,Oklahoma,Severe Storm(s),438
+2019,Oregon,Flood,29
+2019,Oregon,Severe Storm(s),121
+2019,South Carolina,Hurricane,117
+2019,South Dakota,Flood,396
+2019,South Dakota,Severe Storm(s),21
+2019,Tennessee,Flood,344
+2019,Tennessee,Severe Storm(s),10
+2019,Texas,Flood,407
+2019,Vermont,Flood,59
+2019,Washington,Severe Storm(s),87
+2019,West Virginia,Flood,41
+2019,Wisconsin,Flood,134
