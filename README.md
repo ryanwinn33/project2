@@ -18,15 +18,15 @@ Our group would like to look at data on FEMA responses in the United States to d
 
 ## Inspiring Visualizations:
 
-![1](https://github.com/ryanwinn33/project2/blob/jasminwork/RAW_Data/Images/1%20visualization.png?raw=true)
+![1](https://github.com/ryanwinn33/project2/blob/jasminwork/Data/RAW_Data/Images/1%20visualization.png?raw=true)
 
 [link](http://fema.maps.arcgis.com/apps/webappviewer/index.html?id=9dd1376492c7418dbc57172cbaaaef68)
 
-![2](https://github.com/ryanwinn33/project2/blob/jasminwork/RAW_Data/Images/2%20visualization.png?raw=true)
+![2](https://github.com/ryanwinn33/project2/blob/jasminwork/Data/RAW_Data/Images/2%20visualization.png?raw=true)
 
 [link](https://www.fema.gov/data-visualization-public-assistance-program-summary-obligations)
 
-![3](https://github.com/ryanwinn33/project2/blob/jasminwork/RAW_Data/Images/3%20visualization.jpg?raw=true)
+![3](https://github.com/ryanwinn33/project2/blob/jasminwork/Data/RAW_Data/Images/3%20visualization.jpg?raw=true)
 
 [link](https://ourworldindata.org/natural-disasters#link-between-poverty-and-deaths-from-natural-disasters)
 
@@ -34,7 +34,7 @@ Our group would like to look at data on FEMA responses in the United States to d
 
 ## Sketch-up:
 
-![Sketchup](https://github.com/ryanwinn33/project2/blob/jasminwork/RAW_Data/Images/Sketchup.png?raw=true)
+![Sketchup](https://github.com/ryanwinn33/project2/blob/jasminwork/Data/RAW_Data/Images/Sketchup.png?raw=true)
 
 
 ## <insert Intro here>
