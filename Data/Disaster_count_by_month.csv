@@ -1,210 +1,210 @@
 Year,state,incidentType,month,Count of incidents
-2016,Alabama,Severe Storm(s),Jan,759
-2016,Alaska,Severe Storm(s),Feb,6
-2016,Arkansas,Severe Storm(s),Feb,392
-2016,Arkansas,Severe Storm(s),May,90
-2016,Delaware,Snow,Mar,26
-2016,District of Columbia,Snow,Mar,64
-2016,Florida,Hurricane,Oct,1124
-2016,Florida,Hurricane,Sep,506
-2016,Georgia,Hurricane,Oct,545
-2016,Georgia,Severe Storm(s),Feb,259
-2016,Hawaii,Mud/Landslide,Oct,23
-2016,Idaho,Severe Storm(s),Feb,17
-2016,Iowa,Flood,Oct,332
-2016,Iowa,Flood,Sep,123
-2016,Kansas,Severe Storm(s),Oct,149
-2016,Kentucky,Severe Storm(s),Aug,189
-2016,Louisiana,Flood,Aug,1564
-2016,Louisiana,Flood,Feb,37
-2016,Louisiana,Flood,Mar,1007
-2016,Maryland,Flood,Sep,46
-2016,Maryland,Snow,Mar,497
-2016,Minnesota,Flood,Nov,278
-2016,Mississippi,Flood,Mar,313
-2016,Mississippi,Severe Storm(s),Jan,113
-2016,Missouri,Flood,Jan,808
-2016,Montana,Severe Storm(s),May,33
-2016,Montana,Tornado,Aug,14
-2016,New Jersey,Severe Storm(s),Mar,1035
-2016,North Carolina,Hurricane,Oct,1993
-2016,Oklahoma,Flood,Jul,84
-2016,Oklahoma,Severe Storm(s),Feb,398
-2016,Oregon,Severe Storm(s),Feb,420
-2016,Pennsylvania,Flood,Dec,172
-2016,Pennsylvania,Snow,Mar,1223
-2016,South Carolina,Hurricane,Oct,1130
-2016,Tennessee,Fire,Dec,44
-2016,Texas,Flood,Apr,592
-2016,Texas,Flood,Jun,1003
-2016,Texas,Flood,Mar,319
-2016,Texas,Severe Storm(s),Feb,366
-2016,Virginia,Hurricane,Nov,156
-2016,Virginia,Snow,Mar,222
-2016,Washington,Flood,Feb,157
-2016,Washington,Severe Storm(s),Jan,207
-2016,West Virginia,Flood,Jun,2073
-2016,Wisconsin,Flood,Oct,307
-2016,Wisconsin,Severe Storm(s),Aug,223
-2017,Alabama,Hurricane,Nov,91
-2017,Alabama,Hurricane,Sep,40
-2017,Alaska,Severe Storm(s),Dec,19
-2017,Arkansas,Severe Storm(s),Jun,524
-2017,California,Fire,Oct,349
-2017,California,Flood,Apr,1306
-2017,California,Flood,Mar,854
-2017,California,Severe Storm(s),Feb,1072
-2017,California,Severe Storm(s),May,4
-2017,Florida,Hurricane,Oct,13
-2017,Florida,Hurricane,Sep,12351
-2017,Georgia,Hurricane,Sep,1751
-2017,Georgia,Severe Storm(s),Jan,79
-2017,Georgia,Tornado,Jan,180
-2017,Idaho,Flood,Apr,135
-2017,Idaho,Flood,Aug,45
-2017,Idaho,Flood,May,132
-2017,Idaho,Flood,Oct,48
-2017,Iowa,Severe Storm(s),Aug,117
-2017,Kansas,Severe Ice Storm,Feb,141
-2017,Kansas,Severe Storm(s),Nov,86
-2017,Kansas,Snow,Jun,142
-2017,Louisiana,Hurricane,Oct,212
-2017,Mississippi,Hurricane,Nov,168
-2017,Mississippi,Severe Storm(s),May,103
-2017,Mississippi,Tornado,Jan,61
-2017,Missouri,Flood,Jun,1102
-2017,Nebraska,Severe Storm(s),Aug,100
-2017,Nebraska,Severe Storm(s),Jun,18
-2017,Nevada,Severe Storm(s),Feb,184
-2017,Nevada,Severe Storm(s),Mar,91
-2017,New Hampshire,Severe Storm(s),Aug,107
-2017,New Hampshire,Severe Storm(s),Jun,22
-2017,New Mexico,Flood,Dec,150
-2017,New York,Flood,Nov,171
-2017,New York,Snow,Jul,723
-2017,North Dakota,Flood,Jul,149
-2017,Oklahoma,Severe Storm(s),Feb,150
-2017,Oklahoma,Severe Storm(s),May,194
-2017,Oklahoma,Tornado,Jul,130
-2017,Oregon,Severe Storm(s),Aug,37
-2017,Oregon,Severe Storm(s),Jan,70
-2017,Puerto Rico,Hurricane,Sep,3415
-2017,South Carolina,Hurricane,Oct,284
-2017,South Dakota,Severe Storm(s),Feb,137
-2017,Tennessee,Severe Storm(s),Jun,147
-2017,Texas,Hurricane,Aug,6282
-2017,Utah,Flood,Apr,52
-2017,Vermont,Severe Storm(s),Aug,174
-2017,Virgin Islands of the U.S.,Hurricane,Sep,1064
-2017,Washington,Flood,Apr,317
-2017,West Virginia,Severe Storm(s),Aug,274
-2017,Wisconsin,Severe Storm(s),Oct,464
-2017,Wyoming,Flood,Aug,64
-2017,Wyoming,Severe Storm(s),Mar,13
-2018,Alabama,Hurricane,Nov,119
-2018,Alabama,Severe Storm(s),Apr,111
-2018,Alaska,Coastal Storm,Jun,13
-2018,American Samoa,Hurricane,Mar,103
-2018,Arizona,Flood,Aug,4
-2018,Arizona,Severe Storm(s),Nov,8
-2018,California,Fire,Aug,112
-2018,California,Fire,Jan,275
-2018,California,Fire,Nov,217
-2018,Connecticut,Severe Storm(s),Dec,28
-2018,Connecticut,Tornado,Aug,137
-2018,Florida,Hurricane,Oct,952
-2018,Georgia,Hurricane,Oct,511
-2018,Guam,Typhoon,Oct,66
-2018,Hawaii,Flood,May,88
-2018,Hawaii,Hurricane,Sep,53
-2018,Hawaii,Volcano,May,51
-2018,Indiana,Flood,May,340
-2018,Iowa,Severe Storm(s),Aug,422
-2018,Iowa,Severe Storm(s),Sep,27
-2018,Kansas,Severe Storm(s),Oct,102
-2018,Kentucky,Flood,Apr,647
-2018,Maine,Coastal Storm,May,56
-2018,Maine,Severe Storm(s),Jan,650
-2018,Maryland,Flood,Jul,109
-2018,Maryland,Severe Storm(s),Jun,70
-2018,Massachusetts,Severe Storm(s),Jun,391
-2018,Massachusetts,Snow,Jul,376
-2018,Michigan,Flood,Aug,158
-2018,Minnesota,Flood,Sep,638
-2018,Montana,Flood,Aug,66
-2018,Montana,Flood,Oct,46
-2018,Nebraska,Severe Storm(s),Aug,60
-2018,Nebraska,Snow,Jun,43
-2018,New Hampshire,Coastal Storm,Jun,33
-2018,New Hampshire,Severe Storm(s),Jan,257
-2018,New Hampshire,Snow,Jun,96
-2018,New Jersey,Severe Storm(s),Jun,413
-2018,New York,Flood,Oct,141
-2018,North Carolina,Hurricane,Sep,2354
-2018,Northern Mariana Islands,Typhoon,Oct,170
-2018,Northern Mariana Islands,Typhoon,Sep,17
-2018,Ohio,Flood,Apr,1126
-2018,Oklahoma,Fire,Jun,41
-2018,Pennsylvania,Severe Storm(s),Nov,653
-2018,South Carolina,Hurricane,Sep,495
-2018,Vermont,Severe Storm(s),Jan,137
-2018,Vermont,Severe Storm(s),Jul,30
-2018,Virginia,Hurricane,Dec,282
-2018,Virginia,Hurricane,Oct,106
-2018,Washington,Flood,Aug,6
-2018,West Virginia,Mud/Landslide,Apr,124
-2018,West Virginia,Severe Storm(s),Jul,67
-2018,Wisconsin,Flood,Aug,201
-2018,Wisconsin,Flood,Oct,714
-2019,Alabama,Severe Storm(s),Apr,156
-2019,Alabama,Tornado,Mar,17
-2019,Alaska,Earthquake,Jan,218
-2019,Arkansas,Flood,Jun,222
-2019,Arkansas,Flood,Sep,26
-2019,California,Severe Storm(s),Mar,2
-2019,California,Severe Storm(s),May,327
-2019,Florida,Hurricane,Oct,40
-2019,Guam,Typhoon,May,17
-2019,Idaho,Flood,Jun,41
-2019,Illinois,Flood,Sep,174
-2019,Iowa,Flood,Apr,9
-2019,Iowa,Flood,Mar,718
-2019,Kansas,Severe Storm(s),Feb,93
-2019,Kansas,Severe Storm(s),Jun,21
-2019,Kentucky,Severe Storm(s),Apr,696
-2019,Louisiana,Flood,Sep,21
-2019,Louisiana,Hurricane,Aug,142
-2019,Louisiana,Severe Storm(s),Jun,42
+2016,Alabama,Severe Storm(s),Jan,1
+2016,Alaska,Severe Storm(s),Feb,1
+2016,Arkansas,Severe Storm(s),Feb,1
+2016,Arkansas,Severe Storm(s),May,1
+2016,Delaware,Snow,Mar,1
+2016,District of Columbia,Snow,Mar,1
+2016,Florida,Hurricane,Oct,1
+2016,Florida,Hurricane,Sep,1
+2016,Georgia,Hurricane,Oct,1
+2016,Georgia,Severe Storm(s),Feb,1
+2016,Hawaii,Mud/Landslide,Oct,1
+2016,Idaho,Severe Storm(s),Feb,1
+2016,Iowa,Flood,Oct,1
+2016,Iowa,Flood,Sep,1
+2016,Kansas,Severe Storm(s),Oct,1
+2016,Kentucky,Severe Storm(s),Aug,1
+2016,Louisiana,Flood,Aug,1
+2016,Louisiana,Flood,Feb,1
+2016,Louisiana,Flood,Mar,1
+2016,Maryland,Flood,Sep,1
+2016,Maryland,Snow,Mar,1
+2016,Minnesota,Flood,Nov,1
+2016,Mississippi,Flood,Mar,1
+2016,Mississippi,Severe Storm(s),Jan,1
+2016,Missouri,Flood,Jan,1
+2016,Montana,Severe Storm(s),May,1
+2016,Montana,Tornado,Aug,1
+2016,New Jersey,Severe Storm(s),Mar,1
+2016,North Carolina,Hurricane,Oct,1
+2016,Oklahoma,Flood,Jul,1
+2016,Oklahoma,Severe Storm(s),Feb,1
+2016,Oregon,Severe Storm(s),Feb,1
+2016,Pennsylvania,Flood,Dec,1
+2016,Pennsylvania,Snow,Mar,1
+2016,South Carolina,Hurricane,Oct,1
+2016,Tennessee,Fire,Dec,1
+2016,Texas,Flood,Apr,1
+2016,Texas,Flood,Jun,1
+2016,Texas,Flood,Mar,1
+2016,Texas,Severe Storm(s),Feb,1
+2016,Virginia,Hurricane,Nov,1
+2016,Virginia,Snow,Mar,1
+2016,Washington,Flood,Feb,1
+2016,Washington,Severe Storm(s),Jan,1
+2016,West Virginia,Flood,Jun,1
+2016,Wisconsin,Flood,Oct,1
+2016,Wisconsin,Severe Storm(s),Aug,1
+2017,Alabama,Hurricane,Nov,1
+2017,Alabama,Hurricane,Sep,1
+2017,Alaska,Severe Storm(s),Dec,1
+2017,Arkansas,Severe Storm(s),Jun,1
+2017,California,Fire,Oct,1
+2017,California,Flood,Apr,1
+2017,California,Flood,Mar,1
+2017,California,Severe Storm(s),Feb,2
+2017,California,Severe Storm(s),May,1
+2017,Florida,Hurricane,Oct,1
+2017,Florida,Hurricane,Sep,2
+2017,Georgia,Hurricane,Sep,1
+2017,Georgia,Severe Storm(s),Jan,1
+2017,Georgia,Tornado,Jan,1
+2017,Idaho,Flood,Apr,1
+2017,Idaho,Flood,Aug,1
+2017,Idaho,Flood,May,1
+2017,Idaho,Flood,Oct,1
+2017,Iowa,Severe Storm(s),Aug,1
+2017,Kansas,Severe Ice Storm,Feb,1
+2017,Kansas,Severe Storm(s),Nov,1
+2017,Kansas,Snow,Jun,1
+2017,Louisiana,Hurricane,Oct,2
+2017,Mississippi,Hurricane,Nov,1
+2017,Mississippi,Severe Storm(s),May,1
+2017,Mississippi,Tornado,Jan,1
+2017,Missouri,Flood,Jun,1
+2017,Nebraska,Severe Storm(s),Aug,1
+2017,Nebraska,Severe Storm(s),Jun,1
+2017,Nevada,Severe Storm(s),Feb,1
+2017,Nevada,Severe Storm(s),Mar,1
+2017,New Hampshire,Severe Storm(s),Aug,1
+2017,New Hampshire,Severe Storm(s),Jun,1
+2017,New Mexico,Flood,Dec,1
+2017,New York,Flood,Nov,1
+2017,New York,Snow,Jul,1
+2017,North Dakota,Flood,Jul,1
+2017,Oklahoma,Severe Storm(s),Feb,1
+2017,Oklahoma,Severe Storm(s),May,1
+2017,Oklahoma,Tornado,Jul,1
+2017,Oregon,Severe Storm(s),Aug,1
+2017,Oregon,Severe Storm(s),Jan,1
+2017,Puerto Rico,Hurricane,Sep,3
+2017,South Carolina,Hurricane,Oct,1
+2017,South Dakota,Severe Storm(s),Feb,1
+2017,Tennessee,Severe Storm(s),Jun,1
+2017,Texas,Hurricane,Aug,1
+2017,Utah,Flood,Apr,1
+2017,Vermont,Severe Storm(s),Aug,1
+2017,Virgin Islands of the U.S.,Hurricane,Sep,2
+2017,Washington,Flood,Apr,1
+2017,West Virginia,Severe Storm(s),Aug,1
+2017,Wisconsin,Severe Storm(s),Oct,1
+2017,Wyoming,Flood,Aug,1
+2017,Wyoming,Severe Storm(s),Mar,1
+2018,Alabama,Hurricane,Nov,1
+2018,Alabama,Severe Storm(s),Apr,1
+2018,Alaska,Coastal Storm,Jun,1
+2018,American Samoa,Hurricane,Mar,1
+2018,Arizona,Flood,Aug,1
+2018,Arizona,Severe Storm(s),Nov,1
+2018,California,Fire,Aug,1
+2018,California,Fire,Jan,1
+2018,California,Fire,Nov,1
+2018,Connecticut,Severe Storm(s),Dec,1
+2018,Connecticut,Tornado,Aug,1
+2018,Florida,Hurricane,Oct,1
+2018,Georgia,Hurricane,Oct,1
+2018,Guam,Typhoon,Oct,1
+2018,Hawaii,Flood,May,1
+2018,Hawaii,Hurricane,Sep,1
+2018,Hawaii,Volcano,May,1
+2018,Indiana,Flood,May,1
+2018,Iowa,Severe Storm(s),Aug,1
+2018,Iowa,Severe Storm(s),Sep,1
+2018,Kansas,Severe Storm(s),Oct,1
+2018,Kentucky,Flood,Apr,2
+2018,Maine,Coastal Storm,May,1
+2018,Maine,Severe Storm(s),Jan,1
+2018,Maryland,Flood,Jul,1
+2018,Maryland,Severe Storm(s),Jun,1
+2018,Massachusetts,Severe Storm(s),Jun,1
+2018,Massachusetts,Snow,Jul,1
+2018,Michigan,Flood,Aug,1
+2018,Minnesota,Flood,Sep,1
+2018,Montana,Flood,Aug,1
+2018,Montana,Flood,Oct,1
+2018,Nebraska,Severe Storm(s),Aug,1
+2018,Nebraska,Snow,Jun,1
+2018,New Hampshire,Coastal Storm,Jun,1
+2018,New Hampshire,Severe Storm(s),Jan,1
+2018,New Hampshire,Snow,Jun,1
+2018,New Jersey,Severe Storm(s),Jun,1
+2018,New York,Flood,Oct,1
+2018,North Carolina,Hurricane,Sep,1
+2018,Northern Mariana Islands,Typhoon,Oct,1
+2018,Northern Mariana Islands,Typhoon,Sep,1
+2018,Ohio,Flood,Apr,1
+2018,Oklahoma,Fire,Jun,1
+2018,Pennsylvania,Severe Storm(s),Nov,1
+2018,South Carolina,Hurricane,Sep,1
+2018,Vermont,Severe Storm(s),Jan,1
+2018,Vermont,Severe Storm(s),Jul,1
+2018,Virginia,Hurricane,Dec,1
+2018,Virginia,Hurricane,Oct,1
+2018,Washington,Flood,Aug,1
+2018,West Virginia,Mud/Landslide,Apr,1
+2018,West Virginia,Severe Storm(s),Jul,1
+2018,Wisconsin,Flood,Aug,1
+2018,Wisconsin,Flood,Oct,1
+2019,Alabama,Severe Storm(s),Apr,1
+2019,Alabama,Tornado,Mar,1
+2019,Alaska,Earthquake,Jan,1
+2019,Arkansas,Flood,Jun,1
+2019,Arkansas,Flood,Sep,1
+2019,California,Severe Storm(s),Mar,1
+2019,California,Severe Storm(s),May,2
+2019,Florida,Hurricane,Oct,1
+2019,Guam,Typhoon,May,1
+2019,Idaho,Flood,Jun,1
+2019,Illinois,Flood,Sep,1
+2019,Iowa,Flood,Apr,1
+2019,Iowa,Flood,Mar,1
+2019,Kansas,Severe Storm(s),Feb,1
+2019,Kansas,Severe Storm(s),Jun,1
+2019,Kentucky,Severe Storm(s),Apr,1
+2019,Louisiana,Flood,Sep,1
+2019,Louisiana,Hurricane,Aug,1
+2019,Louisiana,Severe Storm(s),Jun,1
 2019,Minnesota,Flood,Feb,1
-2019,Minnesota,Flood,Jun,705
-2019,Mississippi,Severe Storm(s),Apr,312
-2019,Mississippi,Severe Storm(s),Dec,10
-2019,Mississippi,Severe Storm(s),Feb,144
-2019,Mississippi,Severe Storm(s),Jun,90
-2019,Missouri,Flood,May,138
-2019,Missouri,Severe Storm(s),Jul,180
-2019,Montana,Flood,May,38
-2019,Nebraska,Flood,Jun,7
-2019,Nebraska,Flood,Mar,935
-2019,New Hampshire,Severe Storm(s),Aug,4
-2019,North Carolina,Hurricane,Jan,171
-2019,North Carolina,Hurricane,Oct,199
-2019,North Dakota,Flood,Jun,147
-2019,Ohio,Flood,Apr,348
-2019,Ohio,Tornado,Jun,47
-2019,Oklahoma,Severe Storm(s),Jul,52
-2019,Oklahoma,Severe Storm(s),Jun,386
-2019,Oregon,Flood,Jul,29
-2019,Oregon,Severe Storm(s),May,121
-2019,South Carolina,Hurricane,Sep,117
-2019,South Dakota,Flood,Jun,393
-2019,South Dakota,Flood,Sep,3
-2019,South Dakota,Severe Storm(s),Jun,15
-2019,South Dakota,Severe Storm(s),Oct,6
-2019,Tennessee,Flood,Apr,344
-2019,Tennessee,Severe Storm(s),Dec,10
-2019,Texas,Flood,Feb,407
-2019,Vermont,Flood,Jun,59
-2019,Washington,Severe Storm(s),Mar,87
-2019,West Virginia,Flood,Aug,41
-2019,Wisconsin,Flood,Aug,134
+2019,Minnesota,Flood,Jun,1
+2019,Mississippi,Severe Storm(s),Apr,1
+2019,Mississippi,Severe Storm(s),Dec,1
+2019,Mississippi,Severe Storm(s),Feb,1
+2019,Mississippi,Severe Storm(s),Jun,1
+2019,Missouri,Flood,May,1
+2019,Missouri,Severe Storm(s),Jul,1
+2019,Montana,Flood,May,1
+2019,Nebraska,Flood,Jun,1
+2019,Nebraska,Flood,Mar,1
+2019,New Hampshire,Severe Storm(s),Aug,1
+2019,North Carolina,Hurricane,Jan,1
+2019,North Carolina,Hurricane,Oct,1
+2019,North Dakota,Flood,Jun,1
+2019,Ohio,Flood,Apr,1
+2019,Ohio,Tornado,Jun,1
+2019,Oklahoma,Severe Storm(s),Jul,1
+2019,Oklahoma,Severe Storm(s),Jun,1
+2019,Oregon,Flood,Jul,1
+2019,Oregon,Severe Storm(s),May,1
+2019,South Carolina,Hurricane,Sep,1
+2019,South Dakota,Flood,Jun,1
+2019,South Dakota,Flood,Sep,1
+2019,South Dakota,Severe Storm(s),Jun,1
+2019,South Dakota,Severe Storm(s),Oct,1
+2019,Tennessee,Flood,Apr,1
+2019,Tennessee,Severe Storm(s),Dec,1
+2019,Texas,Flood,Feb,1
+2019,Vermont,Flood,Jun,1
+2019,Washington,Severe Storm(s),Mar,1
+2019,West Virginia,Flood,Aug,1
+2019,Wisconsin,Flood,Aug,1
