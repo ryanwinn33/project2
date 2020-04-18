@@ -42,38 +42,54 @@ def disasters_by_month():
 
 @app.route("/api/disasters/<int:year>")
 def disaster_by_year(year):
-    results = collection_m.find({"Year":year})
-    months_data = {}
-    for item in results:
-        if item["Month"] not in months_data:
-            months_data[item["Month"]] = [{"State":item["State"],
-            "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
-            "Total": item["Total Obligated"]}]
-        elif item["Month"] in months_data:
-            months_data[item["Month"]].append({"State":item["State"],
-            "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
-            "Total": item["Total Obligated"]})
+    try:
+        results = collection_m.find({"Year":year})
+        months_data = {}
+        if year in results:
+            for item in results:
+                if item["Month"] not in months_data:
+                    months_data[item["Month"]] = [{"State":item["State"],
+                    "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+                    "Total": item["Total Obligated"]}]
+                elif item["Month"] in months_data:
+                    months_data[item["Month"]].append({"State":item["State"],
+                    "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+                    "Total": item["Total Obligated"]})
+                else:
+                    pass
         else:
-            pass
+            raise Exception(f"Invalid year. {year} not found in our database.")
 
-    return jsonify({year : months_data})
+        return jsonify({year : months_data})
+    except TypeError:
+        return jsonify({"ERROR": "incorrect input type. 'Year' should be of the type 'integer'"})
 
 
 @app.route("/api/disasters/<string:state>")
 def state_disaster(state):
-    results_state = collection_y.find({"State":state})
-    state_data = {}
-    for item in results_state:
-        if item["Year"] not in state_data:
-            state_data[item["Year"]] = [{"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
-            "Total": item["Total Obligated"]}]
-        elif item["Year"] in state_data:
-            state_data[item["Year"]].append({"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
-            "Total": item["Total Obligated"]})
+    try:
+        if state != state.title():
+            state = state.title()
+        results_state = collection_y.find({"State":state})
+        state_data = {}
+        if state in results_state:
+            for item in results_state:
+                if item["Year"] not in state_data:
+                    state_data[item["Year"]] = [{"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+                    "Total": item["Total Obligated"]}]
+                elif item["Year"] in state_data:
+                    state_data[item["Year"]].append({"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+                    "Total": item["Total Obligated"]})
+                else:
+                    pass
         else:
-            pass
+            raise Exception(state + " not found in our database.")
 
-    return jsonify({state : state_data})
+        return jsonify({state : state_data})
+    except TypeError:
+        return jsonify({"ERROR": "incorrect input type. State should be of the type 'string'"})
+
+
 # @app.route("/api/disasters/<string:disasterName>", methods=["POST"])
 # def create_disaster(disasterName):
 #     pass
