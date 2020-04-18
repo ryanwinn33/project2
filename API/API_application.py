@@ -40,22 +40,40 @@ def disasters_by_month():
 
     return jsonify({"Result" : results_month})
 
-# @app.route("/api/disasters/<int:year>")
-# def disaster_by_year(year):
-#     results = collection_m.find({"Year":year})
-#     unique_months = []
-#     months_data = {}
-#     for item in results:
-#         if item["Month"] not in unique_months:
-#             unique_months.append(item["Month"])
-#
-#     for result in results:
-#         if result["Month"] in unique_months:
-#             months_data[result["Month"]].append({"Month": result["Month"],"State":result["State"],
-#             "Type": result["Incident Type"], "Incident Count" : result["Count of Incidents"],
-#             "Total": result["Total Obligated"]})
-#     return jsonify({year : months_data})
+@app.route("/api/disasters/<int:year>")
+def disaster_by_year(year):
+    results = collection_m.find({"Year":year})
+    months_data = {}
+    for item in results:
+        if item["Month"] not in months_data:
+            months_data[item["Month"]] = [{"State":item["State"],
+            "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+            "Total": item["Total Obligated"]}]
+        elif item["Month"] in months_data:
+            months_data[item["Month"]].append({"State":item["State"],
+            "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+            "Total": item["Total Obligated"]})
+        else:
+            pass
 
+    return jsonify({year : months_data})
+
+
+@app.route("/api/disasters/<string:state>")
+def state_disaster(state):
+    results_state = collection_y.find({"State":state})
+    state_data = {}
+    for item in results_state:
+        if item["Year"] not in state_data:
+            state_data[item["Year"]] = [{"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+            "Total": item["Total Obligated"]}]
+        elif item["Year"] in state_data:
+            state_data[item["Year"]].append({"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
+            "Total": item["Total Obligated"]})
+        else:
+            pass
+
+    return jsonify({state : state_data})
 # @app.route("/api/disasters/<string:disasterName>", methods=["POST"])
 # def create_disaster(disasterName):
 #     pass
