@@ -1,36 +1,13 @@
 import pandas as pd
-from flask_pymongo import PyMongo
 import pymongo
 import os
-#import csv_to_MDB
+import csv_to_MDB
 import json
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
-# app.config['MONGO_DBNAME'] = 'disaster_db'
-# app.config["MONGO_URI"] = 'mongodb://localhost:27017'
-# mongo = PyMongo(app)
-conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn)
-
-#disaster_db = csv_to_MDB.init_db()
-db = client.disasterDB
-collection_y = db.disasterByYear
-collection_m = db.disasterByMonth
-
-data_by_month = pd.read_csv("../Data/Disaster_cost_by_month.csv")
-data_by_year = pd.read_csv("../Data/Disaster_cost_by_year.csv")
-#obligated_totals = pd.read_csv("Data/Obligated_totals_by_state.csv")
-
-# Load csvs into databases
-data1 = data_by_month
-data1_json = json.loads(data1.to_json(orient='records'))
-collection_m.insert_many(data1_json)
-
-data2 = data_by_year
-data2_json = json.loads(data2.to_json(orient='records'))
-collection_y.insert_many(data2_json)
+collection_y,collection_m = csv_to_MDB.init_db()
 
 # results = collection_m.find()
 # for item in results:
@@ -38,8 +15,8 @@ collection_y.insert_many(data2_json)
 
 # API routes
 @app.route("/")
-def api_index():
-    return("HTML page here")
+def home():
+    return render_template("home.html")
 
 @app.route("/api/disasters", methods=['GET'])
 def all_disasters():
@@ -62,15 +39,26 @@ def disasters_by_month():
         "Total":item["Total Obligated"]})
 
     return jsonify({"Result" : results_month})
-# 
+
 # @app.route("/api/disasters/<int:year>")
 # def disaster_by_year(year):
 #     results = collection_m.find({"Year":year})
-#     breakdown_by_month = {}
+#     unique_months = []
+#     months_data = {}
 #     for item in results:
-#         if item['Month'] == "Jan":
-#             breakdown_by_month["Jan"] = f
-#     return jsonify({year : breakdown_by_month})
+#         if item["Month"] not in unique_months:
+#             unique_months.append(item["Month"])
+#
+#     for result in results:
+#         if result["Month"] in unique_months:
+#             months_data[result["Month"]].append({"Month": result["Month"],"State":result["State"],
+#             "Type": result["Incident Type"], "Incident Count" : result["Count of Incidents"],
+#             "Total": result["Total Obligated"]})
+#     return jsonify({year : months_data})
+
+# @app.route("/api/disasters/<string:disasterName>", methods=["POST"])
+# def create_disaster(disasterName):
+#     pass
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)as
+    app.run(port=5000, debug=True)

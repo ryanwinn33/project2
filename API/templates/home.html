@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FEMA data API</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript">
+    function httpGetAsyn(theUrl, callback){
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function(){
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+          callback(xmlHttp.responseText);
+      }
+      xmlHttp.open("GET", theUrl, true);
+      xmlHttp.send(null)
+    }
+
+    httpGetAsyn('http//127.0.01:5000/api/diasters',function(response){
+      alert("Data Processed Successfully");
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h2>2016-2019 Disasters in United States and FEMA Public Assistance Summary</h2>
+      <p>Load data for all years, all states, and disaster types by clicking Run Data button below</p>
+      <p><a class="btn btn-primary btn-lg" href="/home" role="button">Run Data</a></p>
+    </div>
+    <h3>Other endpoints:</h3>
+  </div>
+</body>
+</html>

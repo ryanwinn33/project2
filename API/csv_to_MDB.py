@@ -10,11 +10,11 @@ def init_db():
     client = pymongo.MongoClient(conn)
 
     # Name of database
-    disaster_db = client.disasterDB
+    db = client.disastersDB
 
     # collections
-    collection_y = disaster_db.disasterByYear
-    collection_m = disaster_db.disasterByMonth
+    collection_y = db.disasterByYear
+    collection_m = db.disasterByMonth
 
     if __name__ == "__main__":
 
@@ -38,9 +38,8 @@ def init_db():
 
     else:
         print("CSV's already imported")
-        return disaster_db
-        # collection_y = disaster_db.disasterByYear
-        # collection_m = disaster_db.disasterByMonth
+        # return db
+        return collection_y, collection_m
 
 
 init_db()
