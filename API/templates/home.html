@@ -31,7 +31,7 @@
     <ul>
       <li>GET all disasters by year</li>
       <ul>
-        <li>"/api/disasters"</li></ul>
+        <li>/api/disasters"</li></ul>
       <li>GET all disasters with monthly data</li>
       <ul>
         <li>"/api/disastermonth"</li></ul>
@@ -48,10 +48,18 @@
     </ul>
   </div>
   <div>
+    <h3 id="display">Display some text</h3>
     <script>
-    httpGetAsyn('http//127.0.01:5000/api/disasters',function(response){
-      alert("Data Processed Successfully");
-    });
+      fetch('http://127.0.0.1:5000/api/disastermonth').then(function(repsonse){
+        return response.json();
+      })
+      .then(function(myJson){
+        document.getElementById('display').innerHTML = myJson['Result'];
+      });
+
+    // httpGetAsyn('http//127.0.01:5000/api/disasters',function(response){
+    //   alert("Data Processed Successfully");
+
     </script>
   </div>
 </body>

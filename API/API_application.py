@@ -3,9 +3,16 @@ import pymongo
 import os
 import csv_to_MDB
 import json
-from flask import Flask, jsonify, request, render_template
+from flask_cors import CORS
+from flask import Flask, jsonify, Response, request, render_template
 
 app = Flask(__name__)
+CORS(app)
+# cors = CORS(app, resources={
+#     r"/*": {
+#         "origins": "*"
+#     }
+# }
 
 collection_y,collection_m = csv_to_MDB.init_db()
 
