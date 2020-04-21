@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> 
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <title>Chart.js Chart</title>
+</head>  
+<body>
+       <!-- <canvas id = "myChart" width = "400" height = "400"></canvas>  -->
+<script>
+    d3.json('http://127.0.0.1:5000/api/disasters', function(data){
+    // var api_url_all = 'http://127.0.0.1:5000/api/disasters'
+    getData();
+    
+    async function getData() {
+        // var response = await fetch(api_url_all);
+        var data = await response.json();
+        console.log(data);
+    }
+
+    // async function chartData() {
+    //     await getData();
+    //     var ctx = document.getElementById('myChart').getContext('2d');
+    //     var xlabels = [];
+    //     var myChart = new Chart(ctx, {
+    //         type: 'line',
+    //         data: {
+    //             labels: xlabels
+    //             datasets: [{
+    //                 data: ylabels
+    //                 label: 'Incidents per Month'
+    //                     backgroundColor: [
+    //                         'rgba(54, 162, 235, 0.2)'
+    //                     ],
+    //                     borderColor: [
+    //                         'rgba(54, 162, 235, 1)'
+    //                     ],
+    //                         borderWidth: 1
+    //             }] 
+    //         },
+    //         options: { 
+    //             scales: {
+    //                 yAxes: [{
+    //                     ticks: {
+    //                         beginAtZero:true
+    //                     }
+    //                 }]
+    //             },
+    //             title: {
+    //                display: true,
+    //                text: 'Disaster Count by Month',
+    //                fontSize: 18
+    //            }
+    //         }
+    //         getData();
+            
+    //         async function getData() {
+    //             var response = await
+    //         }
+    //     })
+    // };
+    </sript>
+</body>
+</html>
+
+
