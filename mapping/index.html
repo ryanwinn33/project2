@@ -23,7 +23,29 @@
 
   </head>
   <body>
-
+    <table border="0" cellpadding="10" style="overflow-y: scroll;">
+      <tr>
+        <td>
+          <div id="table_container" class="csvTable"></div>
+        </td>
+        <td>
+          <div id="map_container"></div>
+        </td>
+        <td>
+          <div id="d3legend" class="legend"></div>
+        </td>
+        <td>
+          <div class="styled-select">
+            <select id="data_sources" name="data_sources" onchange="yearlyData(this.value)">
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- The div where we will inject our map -->
     <div id="map"></div>
 
