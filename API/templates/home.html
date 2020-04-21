@@ -24,31 +24,97 @@
   <div class="container-fluid">
     <div class="jumbotron text-center">
       <h2>2016-2019 Disasters in United States and FEMA Public Assistance Summary</h2>
-      <p>Load data for all years, all states, and disaster types by clicking Run Data button below</p>
-      <p><a class="btn btn-primary btn-lg" href="/home" role="button">Run Data</a></p>
+      <p>See Endpoints To All Data Below</p>
     </div>
     <h3>Endpoints</h3>
     <ul>
-      <li>GET all disasters by year</li>
-      <ul>
-        <li>/api/disasters"</li></ul>
-      <li>GET all disasters with monthly data</li>
-      <ul>
-        <li>"/api/disastermonth"</li></ul>
-      <li>GET all disasters within a given year (range 2016-2019)</li>
-      <ul>
-        <li>"/api/disasters/(enter year)"</list>
-        <li>Example: "/api/disasters/<strong>2016</strong>"</ul>
-      <li>GET all disasters from a specific state</li>
-      <ul>
-        <li>"/api/disasters/(enter state name)"</li>
-        <li>Example: "/api/disasters/<strong>Oregon</strong>"
-
-
+      <li><a href="http://127.0.0.1:5000/api/disasters" target="_blank">U.S Disasters by Year</a></li>
+      <li><a href="http://127.0.0.1:5000/api/disastermonth" target="_blank">U.S Disasters by Month</a></li>
+      <li>U.S. Disasters within a given year (range 2016-2019)</li>
+        <ul>
+          <li><a href="http://127.0.0.1:5000/api/disasters/2016" target="_blank">2016</a></li>
+          <li><a href="http://127.0.0.1:5000/api/disasters/2017" target="_blank">2017</a></li>
+          <li><a href="http://127.0.0.1:5000/api/disasters/2018" target="_blank">2018</a></li>
+          <li><a href="http://127.0.0.1:5000/api/disasters/2019" target="_blank">2019</a></li>
+        </ul>  
+        <li>All Disasters from a Specific State or U.S. Territory</li>
+      <table width="100%">
+        <tr>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Alabama" target="_blank">Alabama</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Alaska" target="_blank">Alaska</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/American_Samoa" target="_blank">American Samoa</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Arizona" target="_blank">Arizona</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Arkansas" target="_blank">Arkansas</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/California" target="_blank">California</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Colorado" target="_blank"> Colorado</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Connecticut" target="_blank">Connecticut</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Delaware" target="_blank">Delaware</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/District_of_Columbia" target="_blank">District of Columbia</a></td>  
+        </tr>
+        <tr>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Florida" target="_blank">Florida</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Georgia" target="_blank">Georgia</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Guam" target="_blank">Guam</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Hawaii" target="_blank">Hawaii</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Idaho" target="_blank">Idaho</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Illinois" target="_blank">Illinois</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Indiana" target="_blank">Indiana</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Iowa" target="_blank">Iowa</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Kansas" target="_blank">Kansas</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Kentucky" target="_blank">Kentucky</a></td>
+        </tr>
+        <tr>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Louisiana" target="_blank">Louisiana</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Maine" target="_blank">Maine</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Maryland" target="_blank">Maryland</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Massachusetts" target="_blank">Massachusetts</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Michigan" target="_blank">Michigan</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Minnesota" target="_blank">Minnesota</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Mississippi" target="_blank">Mississippi</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Missouri" target="_blank">Missouri</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Montana" target="_blank">Montana</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Nebraska" target="_blank">Nebraska</a></td>
+        </tr>
+        <tr>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Nevada" target="_blank">Nevada</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/New_Hampshire" target="_blank">New Hampshire</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/New_Jersey" target="_blank">New Jersey</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/New_Mexico" target="_blank">New Mexico</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/New_York" target="_blank">New York</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/North_Carolina" target="_blank">North Carolina</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/North_Dakota" target="_blank">North Dakota</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Northern_Mariana_Islands" target="_blank">Northern Mariana Islands</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Ohio" target="_blank">Ohio</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Oregon" target="_blank">Oregon</a></td>
+        </tr>
+        <tr>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Pennsylvania" target="_blank">Pennsylvania</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Puerto_Rico" target="_blank">Puerto Rico</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Rhode_Island" target="_blank">Rhode Island</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/South_Carolina" target="_blank">South Carolina</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/South_Dakota" target="_blank">South Dakota</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Tennessee" target="_blank">Tennessee</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Texas" target="_blank">Texas</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Virgin_Islands_of_the_US" target="_blank">U.S. Virgin Islands</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Utah" target="_blank">Utah</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Vermont" target="_blank">Vermont</a></td>
+        </tr>
+        <tr>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Virginia" target="_blank">Virginia</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Washington" target="_blank">Washington</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/West_Virginia" target="_blank">West Virginia</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Wisconsin" target="_blank">Wisconsin</a></td>
+          <td><a href="http://127.0.0.1:5000/api/disasterstate/Wyoming" target="_blank">Wyoming</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
     </ul>
   </div>
   <div>
-    <h3 id="display">Display some text</h3>
     <script>
       fetch('http://127.0.0.1:5000/api/disastermonth').then(function(repsonse){
         return response.json();
