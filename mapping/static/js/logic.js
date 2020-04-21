@@ -1,4 +1,3 @@
-
 var mapboxAccessToken = API_KEY;
 var map = L.map('map').setView([37.8, -96], 4);
 
@@ -9,9 +8,49 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1
 }).addTo(map);
 
+var layerBoolean = false;
+
+/**
+ * Geoff:
+ * Declared geojson and info outside so they can be used to clear else where in the 
+ * file. Effectively changing their scope from local to global
+ */
+
 var geojson;
 
+var info;
+
+map.on("layeradd", function(event){
+
+
+
+    // When event is fired update chart 
+
+    // After chart is updated change a global variable to true or to the year
+
+
+
+    // console.log("I am showing what the event variable holds.");
+    // console.log(event);
+    // console.log("I am showing what the this keyword variable holds.");
+    // console.log(this);
+    // console.log("Does this work?");
+});
+
+/**
+ * This function fires off on page load as well as when the select element is changed
+ * @param {*} year 
+ */
 function yearlyData(year){
+
+    if (layerBoolean) {
+        map.removeLayer(geojson);
+        // Remove old html from layer control
+        var controls = d3.select("div.leaflet-top.leaflet-right");
+        controls.html('');
+        // map.removeLayer(info);
+    }
+   
 
     d3.json('http://127.0.0.1:5000/api/disasters', function(data){
 
@@ -24,7 +63,10 @@ function yearlyData(year){
          */
         function style(feature) {
             return {
-                fillColor: getColor(feature.properties.name, data),
+                /**
+                 * Passed year into this function.
+                 */
+                fillColor: getColor(feature.properties.name, data, year),
                 weight: 2,
                 opacity: 1,
                 color: 'white',
@@ -47,7 +89,7 @@ function yearlyData(year){
         ).addTo(map);
     // Create a function to add interactivity with mouseover
 
-        var info = L.control();
+        info = L.control();
 
 
         info.onAdd = function (map) {
@@ -64,35 +106,49 @@ function yearlyData(year){
         };
 
         info.addTo(map);
+
+        layerBoolean = true;
     });
 //-----------------------------------------------------------------------------------//
 
 
 
-    console.log(year);
+    // console.log(year);
 };
-document = "mapping/index.html"
-window.onload = function () {
-    var DropdownList = document.getElementById("data_sources").value;
-    var SelectedValue = DropdownList.value;
 
-    if (SelectedValue = "2016")
-    {year = 2016;}
-    else if (SelectedValue = "2017")
-    {year = 2017;}
-    else if (SelectedValue = "2018")
-    {year = 2018;}
-    else
-    {year = 2019;}
+
+document = "mapping/index.html"
+
+/**
+ * Geoff: This is a function that fires off on page load and it 
+ * just calls the yearly data function with a year.
+ */
+window.onload = function () {
+
+    yearlyData("2016");
+
+    // var DropdownList = document.getElementById("data_sources").value;
+    // var SelectedValue = DropdownList.value;
+
+    // if (SelectedValue = "2016")
+    // {year = 2016;}
+    // else if (SelectedValue = "2017")
+    // {year = 2017;}
+    // else if (SelectedValue = "2018")
+    // {year = 2018;}
+    // else
+    // {year = 2019;}
 }
 
 // var year = 2017
 
 /**
- * 
- * @param {*} name 
+ * This function will color the choropleth all pretty and shtuff.
+ * @param {*} name This is the name of the state
+ * @param {*} apidata This is the data from the d3.json() call
+ * @param {*} year This is the selected or provided year to the change function.
  */
-function getColor(name, apidata) {
+function getColor(name, apidata, year) {
 
     console.log(apidata.Result);
 
@@ -116,8 +172,15 @@ function getColor(name, apidata) {
     if (typeof apidata === 'object') {
         apidata.Result.forEach(function(data){
             if(data.State === name) {
-                console.log(`Yo I am on state ${data.State} and I found a match`)
-                if(data.Year === year){                  
+
+                /**
+                 * Geoff: Here we made sure to test for the years type 
+                 * and cast it as a number
+                 */
+                console.log(`year is: ${year}`);
+                console.log(`Its type is: ${typeof year}`)
+
+                if(data.Year === Number(year)){                  
                     dollars = data.Total;
                     console.log(`dollars be this much ${dollars}`);
                 }
@@ -144,8 +207,7 @@ function highlightFeature(e) {
     layer.setStyle({
         weight: 5,
         color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
+        dashArray: ''
     });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
