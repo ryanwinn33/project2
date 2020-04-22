@@ -74,8 +74,6 @@ function yearlyData(year){
                 fillOpacity: 0.7
             };
         }
-
-
         geojson = L.geoJson(statesData, {
             style: style,
             onEachFeature: function(feature, layer){
@@ -89,35 +87,30 @@ function yearlyData(year){
         ).addTo(map);
     // Create a function to add interactivity with mouseover
 
-        info = L.control();
+        // info = L.control();
+
+        // info.onAdd = function (map) {
+        //     this._div = L.DomUtil.create('div', 'info');
+        //     this.update();
+        //     return this._div;
+        // };
+        // // Hover over a state to see the Total obligated cost and the Disaster Count
+        // info.update = function (props) {
+        //     this._div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
+        //         '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
+        //         '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
+        //         : 'Hover over a state');
+        // };
+
+        // info.addTo(map);
+
+        layerBoolean = true;        
 
 
-        info.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info');
-            this.update();
-            return this._div;
-        };
-        // Hover over a state to see the Total obligated cost and the Disaster Count
-        info.update = function (props) {
-            this._div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
-                '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
-                '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
-                : 'Hover over a state');
-        };
-
-        info.addTo(map);
-
-        layerBoolean = true;
     });
-//-----------------------------------------------------------------------------------//
-
-
-
     // console.log(year);
 };
-
-
-document = "mapping/index.html"
+// document = "mapping/index.html"
 
 /**
  * Geoff: This is a function that fires off on page load and it 
@@ -164,7 +157,6 @@ function getColor(name, apidata, year) {
 
     //first loop through each year
 
-
     // then loop through each state
 
     var dollars = 0;
@@ -191,7 +183,7 @@ function getColor(name, apidata, year) {
         console.log('Apidata is empty');
     }
 
-    return dollars > 100000000 ? '#800026' : //just an example using population density from us-states.js
+    return dollars > 100000000 ? '#800026' :
         dollars > 60000000  ? '#BD0026' :
         dollars > 40000000 ? '#E31A1C' :
         dollars > 10000000  ? '#FC4E2A' :
@@ -200,22 +192,22 @@ function getColor(name, apidata, year) {
         dollars > 100000   ? '#FED976' :
                     '#FFEDA0';
 }
+// Interactivity
+    function highlightFeature(e) {
+        var layer = e.target;
 
-function highlightFeature(e) {
-    var layer = e.target;
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: ''
+        });
 
-    layer.setStyle({
-        weight: 5,
-        color: '#666',
-        dashArray: ''
-    });
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+        }
 
-    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-        layer.bringToFront();
+        info.update(layer.feature.properties);    
     }
-
-    info.update(layer.feature.properties);    
-}
 
 /**
  * 
@@ -247,31 +239,40 @@ function onEachFeature(feature, layer) {
     });
 }
 
-// geojson = L.geoJson(statesData, {
-//     style: style,
-//     onEachFeature: onEachFeature
-// }).addTo(map);
+geojson = L.geoJson(statesData, {
+    style: style,
+    onEachFeature: onEachFeature
+}).addTo(map);
 
+// Legend
 // var legend = L.control({position: 'bottomright'});
 
 // legend.onAdd = function (map) {
+//     var div = L.DomUtil.create('div', 'info legend');
+//         var grades = [100000, 1000000, 5000000 , 10000000, 40000000, 60000000, 100000000];
+//         var colors = ['#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
+//         var labels = [];
+//         // from, to;
+//         var legendInfo = "<h1>Median Income</h1>" +
+//         "<div class=\"labels\">" +
+//           "<div class=\"min\">" + grades[0] + "</div>" +
+//           "<div class=\"max\">" + grades[grades.length - 1] + "</div>" +
+//         "</div>";
 
-//     var div = L.DomUtil.create('div', 'info legend'),
-//         grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-//         labels = [],
-//         from, to;
+//         div.innerHTML = legendInfo;
 
-//     for (var i = 0; i < grades.length; i++) {
-//         from = grades[i];
-//         to = grades[i + 1];
-
-//         labels.push(
-//             '<i style="background:' + getColor(from + 1) + '"></i> ' +
-//             from + (to ? '&ndash;' + to : '+'));
-//     }
+//         limits.forEach(function(grade, index) {
+//             labels.push('<i style="background:' + colors[index] + "\"></li>");
+//         });
+//     // for (var i = 0; i < grades.length; i++) {
+//     //     from = grades[i];
+//     //     to = grades[i + 1];
+//     //     labels.push(
+//             // '<i style="background:' + getColor(from + 1) + '"></i> ' +
+//             // from + (to ? '&ndash;' + to : '+'));
+//     // }
 
 //     div.innerHTML = labels.join('<br>');
 //     return div;
 // };
-
 // legend.addTo(map);
