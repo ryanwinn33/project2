@@ -8,11 +8,6 @@ from flask import Flask, jsonify, Response, request, render_template
 
 app = Flask(__name__)
 CORS(app)
-# cors = CORS(app, resources={
-#     r"/*": {
-#         "origins": "*"
-#     }
-# }
 
 collection_year,collection_month = csv_to_MDB.init_db()
 
@@ -52,7 +47,6 @@ def disaster_by_year(year):
     try:
         results = collection_month.find({"Year":year})
         months_data = {}
-        # if year in results["Year"]:
         for item in results:
             if item["Month"] not in months_data:
                 months_data[item["Month"]] = [{"State":item["State"],
@@ -64,10 +58,12 @@ def disaster_by_year(year):
                 "Total": item["Total Obligated"]})
             else:
                 pass
-        # else:
-        #     raise Exception(f"Invalid year. {year} not found in our database.")
+        if months_data:
+            return jsonify({year : months_data})
+        else:
+            raise Exception(f"Invalid year. {year} not found in our database.")
 
-        return jsonify({year : months_data})
+
     except TypeError:
         return jsonify({"ERROR": "incorrect input type. 'Year' should be of the type 'integer'"})
 
@@ -77,9 +73,17 @@ def state_disaster(state):
     try:
         if state != state.title():
             state = state.title()
+            if "District" in state:
+                state = "District_of_Columbia"
+            if "Virgin" in state:
+                state = "Virgin_Islands_of_the_U.S."
+        if "_" in state:
+            breakdown = state.split("_")
+            separator = " "
+            state = separator.join(breakdown)
+            print(state)
         results_state = collection_year.find({"State":state})
         state_data = {}
-        # if state in results_state:
         for item in results_state:
             if item["Year"] not in state_data:
                 state_data[item["Year"]] = [{"Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
@@ -89,12 +93,12 @@ def state_disaster(state):
                 "Total": item["Total Obligated"]})
             else:
                 pass
-        # else:
-        #     raise Exception(state + " not found in our database.")
-
-        return jsonify({state : state_data})
+        if state_data:
+            return jsonify({state : state_data})
+        else:
+            raise Exception(state + " not found in our database.")
     except TypeError:
-        return jsonify({"ERROR": "incorrect input type. State should be of the type 'string'"})
+        return jsonify({"ERROR": "incorrect input."})
 
 
 # @app.route("/api/disasters/<string:disasterName>", methods=["POST"])
