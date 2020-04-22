@@ -1,4 +1,4 @@
-var mapboxAccessToken = "pk.eyJ1Ijoicnlhbndpbm4wIiwiYSI6ImNrOGx0bGZ4MjBmajIzZW56bzdkMW5ya2EifQ.8sE2yFNX-GdxX2C4CisikA";
+var mapboxAccessToken = API_KEY;
 var map = L.map('map').setView([37.8, -96], 4);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
@@ -8,69 +8,147 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1
 }).addTo(map);
 
-var geojson;
-
-d3.json('http://127.0.0.1:5000/api/disasters', function(data){
-
-    // L.geoJson(statesData).addTo(map);
-
-    // Create a function to add color based on disaster count.​
-    /**
-     * This will style each marker.
-     * @param {*} feature 
-     */
-    function style(feature) {
-        return {
-            fillColor: getColor(feature.properties.name, data),
-            weight: 2,
-            opacity: 1,
-            color: 'white',
-            dashArray: '3',
-            fillOpacity: 0.7
-        };
-    }
-
-    geojson = L.geoJson(statesData, {
-        style: style,
-        onEachFeature: function(feature, layer){
-           return {
-                mouseover: highlightFeature,
-                mouseout: resetHighlight,
-                click: zoomToFeature
-            }
-        }
-    }
-    ).addTo(map);
-
-});
-
-
-// Create a function to add interactivity with mouseover
-
-var info = L.control();
-
-info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info');
-    this.update();
-    return this._div;
-};
-// Hover over a state to see the Total obligated cost and the Disaster Count
-info.update = function (props) {
-    this._div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.Total + ' USD' +
-        '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
-        : 'Hover over a state');
-};
-
-info.addTo(map);
-
-var year = 2016;
+var layerBoolean = false;
 
 /**
- * 
- * @param {*} name 
+ * Geoff:
+ * Declared geojson and info outside so they can be used to clear else where in the 
+ * file. Effectively changing their scope from local to global
  */
-function getColor(name, apidata) {
+
+var geojson;
+
+var info;
+
+map.on("layeradd", function(event){
+
+
+
+    // When event is fired update chart 
+
+    // After chart is updated change a global variable to true or to the year
+
+
+
+    // console.log("I am showing what the event variable holds.");
+    // console.log(event);
+    // console.log("I am showing what the this keyword variable holds.");
+    // console.log(this);
+    // console.log("Does this work?");
+});
+
+/**
+ * This function fires off on page load as well as when the select element is changed
+ * @param {*} year 
+ */
+function yearlyData(year){
+
+    if (layerBoolean) {
+        map.removeLayer(geojson);
+        // Remove old html from layer control
+        var controls = d3.select("div.leaflet-top.leaflet-right");
+        controls.html('');
+        // map.removeLayer(info);
+    }
+   
+
+    d3.json('http://127.0.0.1:5000/api/disasters', function(data){
+
+        L.geoJson(statesData).addTo(map);
+
+        // Create a function to add color based on disaster count.​
+        /**
+         * This will style each marker.
+         * @param {*} feature 
+         */
+        function style(feature) {
+            return {
+                /**
+                 * Passed year into this function.
+                 */
+                fillColor: getColor(feature.properties.name, data, year),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
+
+
+        geojson = L.geoJson(statesData, {
+            style: style,
+            onEachFeature: function(feature, layer){
+            return {
+                    mouseover: highlightFeature,
+                    mouseout: resetHighlight,
+                    click: zoomToFeature
+                }
+            }
+        }
+        ).addTo(map);
+    // Create a function to add interactivity with mouseover
+
+        info = L.control();
+
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            return this._div;
+        };
+        // Hover over a state to see the Total obligated cost and the Disaster Count
+        info.update = function (props) {
+            this._div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
+                '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
+                '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
+                : 'Hover over a state');
+        };
+
+        info.addTo(map);
+
+        layerBoolean = true;
+    });
+//-----------------------------------------------------------------------------------//
+
+
+
+    // console.log(year);
+};
+
+
+document = "mapping/index.html"
+
+/**
+ * Geoff: This is a function that fires off on page load and it 
+ * just calls the yearly data function with a year.
+ */
+window.onload = function () {
+
+    yearlyData("2016");
+
+    // var DropdownList = document.getElementById("data_sources").value;
+    // var SelectedValue = DropdownList.value;
+
+    // if (SelectedValue = "2016")
+    // {year = 2016;}
+    // else if (SelectedValue = "2017")
+    // {year = 2017;}
+    // else if (SelectedValue = "2018")
+    // {year = 2018;}
+    // else
+    // {year = 2019;}
+}
+
+// var year = 2017
+
+/**
+ * This function will color the choropleth all pretty and shtuff.
+ * @param {*} name This is the name of the state
+ * @param {*} apidata This is the data from the d3.json() call
+ * @param {*} year This is the selected or provided year to the change function.
+ */
+function getColor(name, apidata, year) {
 
     console.log(apidata.Result);
 
@@ -85,7 +163,7 @@ function getColor(name, apidata) {
     }
 
     //first loop through each year
- 
+
 
     // then loop through each state
 
@@ -94,8 +172,15 @@ function getColor(name, apidata) {
     if (typeof apidata === 'object') {
         apidata.Result.forEach(function(data){
             if(data.State === name) {
-                console.log(`Yo I am on state ${data.State} and I found a match`)
-                if(data.Year === year){                  
+
+                /**
+                 * Geoff: Here we made sure to test for the years type 
+                 * and cast it as a number
+                 */
+                console.log(`year is: ${year}`);
+                console.log(`Its type is: ${typeof year}`)
+
+                if(data.Year === Number(year)){                  
                     dollars = data.Total;
                     console.log(`dollars be this much ${dollars}`);
                 }
@@ -106,13 +191,13 @@ function getColor(name, apidata) {
         console.log('Apidata is empty');
     }
 
-    return dollars === '$29,301,996.35 ' ? '#800026' : //just an example using population density from us-states.js
-        dollars > 10000000  ? '#BD0026' :
-        dollars > 5000000 ? '#E31A1C' :
-        dollars > 2000000  ? '#FC4E2A' :
-        dollars > 500000   ? '#FD8D3C' :
-        dollars > 20   ? '#FEB24C' :
-        dollars > 10   ? '#FED976' :
+    return dollars > 100000000 ? '#800026' : //just an example using population density from us-states.js
+        dollars > 60000000  ? '#BD0026' :
+        dollars > 40000000 ? '#E31A1C' :
+        dollars > 10000000  ? '#FC4E2A' :
+        dollars > 5000000   ? '#FD8D3C' :
+        dollars > 1000000   ? '#FEB24C' :
+        dollars > 100000   ? '#FED976' :
                     '#FFEDA0';
 }
 
@@ -122,15 +207,14 @@ function highlightFeature(e) {
     layer.setStyle({
         weight: 5,
         color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
+        dashArray: ''
     });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
     }
 
-    info.update(layer.feature.properties);
+    info.update(layer.feature.properties);    
 }
 
 /**
@@ -138,7 +222,7 @@ function highlightFeature(e) {
  * @param {*} e 
  */
 function resetHighlight(e) {
-    geojson.resetStyle(e.target);
+    geojson1.resetStyle(e.target);
     info.update();
 }
 

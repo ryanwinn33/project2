@@ -38,24 +38,52 @@
                     <p class="smtext"> 
                         Use the interactive maps below to explore disasters by state and and FEMA Dollars Obligated
                     </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="http://127.0.0.1:5000/">FEMA Data API</a>
+                    </p>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="Dropdown">
-                            <h5>Select Disaster Type:</h5>
-                            <!-- change the function for Disaster selection -->
-                            <select id="selDisaster" onchange="optionChanged(this.value)"></select>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Select Year:</h5>
+                <table border="0" cellpadding="10" style="overflow-y: scroll;">
+                    <tr>
+                        <td>
+                            <div id="table_container" class="csvTable"></div>
+                        </td>
+                        <td>
+                            <div id="map_container"></div>
+                        </td>
+                        <td>
+                            <div class="styled-select">
+                                <select id="data_sources" name="data_sources" onchange="yearlyData(this.value)">
+                                    <option value=2016>2016</option>
+                                    <option value=2017>2017</option>
+                                    <option value=2018>2018</option>
+                                    <option value=2019>2019</option>
+                                </select>
+                            </div>
+                        </td>
+                            <!-- <td>
+                                <div id="d3legend" class="legend"></div>
+                            </td> -->
+                    </tr>
+                </table>
+                <br>
+                <div id="map">
+                    <script type="text/javascript" src="mapping/static/js/config.js"></script>
+                    <script type="text/javascript" src="mapping/static/js/logic.js"></script>
                 </div>
-                <div class="row">
-                    <div class="col-md-12" id="map">
-                        <!-- API key -->
-                        <script type="text/javascript" src="mapping/static/js/config.js"></script>
-                        <!-- JS -->
-                        <script type="text/javascript" src="mapping/static/js/logic.js"></script>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="chart">
+                <h5>Select Disaster Type:</h5>
+                <!-- change the function for Disaster selection -->
+                <select id="selDisaster" onchange="optionChanged(this.value)"></select>
+                <!-- JS -->
+                <script type="text/javascript" src="charting/app.js"></script>
             </div>
         </div>
     </div>
