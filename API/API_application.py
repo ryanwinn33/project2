@@ -31,16 +31,27 @@ def all_disasters():
 
     return jsonify({"Result" : results})
 
-@app.route("/api/disastermonth", methods=['GET'])
-def disasters_by_month():
-    disasters_month = collection_month.find()
-    results_month = []
-    for item in disasters_month:
-        results_month.append({"Year" : item["Year"], "Month": item["Month"], "State":item["State"],
-        "Type": item["Incident Type"], "Incident Count" : item["Count of Incidents"],
-        "Total":item["Total Obligated"]})
+@app.route("/api/disastermonth/<int:year>", methods=['GET'])
+def disasters_by_month(year):
+    disasters_month = collection_month.find({"Year":year})
+    results_month = {}
 
-    return jsonify({"Result" : results_month})
+    for item in disasters_month:
+        if item["Month"] not in results_month:
+            results_month[item["Month"]] = [{"Incident Count" : item["Count of Incidents"],
+            "Total": item["Total Obligated"]}]
+        elif item["Month"] in results_month:
+            results_month[item["Month"]][0]["Incident Count"]+=item["Count of Incidents"]
+            results_month[item["Month"]][0]["Total"]+= item["Total Obligated"]
+        else:
+            pass
+    # for item in results_month:
+    #     if item[item][0] == "Total"
+    if results_month:
+        return jsonify({year : results_month})
+    else:
+        raise Exception(f"Invalid year. {year} not found in our database.")
+
 
 @app.route("/api/disasteryear/<int:year>")
 def disaster_by_year(year):
@@ -100,10 +111,6 @@ def state_disaster(state):
     except TypeError:
         return jsonify({"ERROR": "incorrect input."})
 
-
-# @app.route("/api/disasters/<string:disasterName>", methods=["POST"])
-# def create_disaster(disasterName):
-#     pass
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
