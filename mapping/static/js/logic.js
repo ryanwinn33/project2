@@ -87,16 +87,16 @@ function yearlyData(year){
         ).addTo(map);
     // Create a function to add interactivity with mouseover
 
-        // info = L.control();
+        // var info = L.control();
 
         // info.onAdd = function (map) {
-        //     this._div = L.DomUtil.create('div', 'info');
+        //     this.div = L.DomUtil.create('div', 'info');
         //     this.update();
         //     return this._div;
         // };
         // // Hover over a state to see the Total obligated cost and the Disaster Count
         // info.update = function (props) {
-        //     this._div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
+        //     this.div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
         //         '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
         //         '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
         //         : 'Hover over a state');
@@ -192,27 +192,48 @@ function getColor(name, apidata, year) {
         dollars > 100000   ? '#FED976' :
                     '#FFEDA0';
 }
-// Interactivity
-    function highlightFeature(e) {
-        var layer = e.target;
 
-        layer.setStyle({
-            weight: 5,
-            color: '#666',
-            dashArray: ''
-        });
+/*Legend specific*/
+var legend = L.control({ position: "bottomleft" });
 
-        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-            layer.bringToFront();
-        }
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h4>FEMA Amounts Obligated</h4>";
+  div.innerHTML += '<i style="background: #FED976"></i><span>> $100000</span><br>';
+  div.innerHTML += '<i style="background: #FEB24C"></i><span>> $1000000</span><br>';
+  div.innerHTML += '<i style="background: #FD8D3C"></i><span>> $5000000</span><br>';
+  div.innerHTML += '<i style="background: #FC4E2A"></i><span>> $10000000</span><br>';
+  div.innerHTML += '<i style="background: #E31A1C"></i><span>> $40000000</span><br>';
+  div.innerHTML += '<i style="background: #BD0026"></i><span>> $60000000</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>> $100000000</span><br>';
 
-        info.update(layer.feature.properties);    
-    }
+  return div;
+};
 
+legend.addTo(map);
 /**
  * 
  * @param {*} e 
  */
+// Interactivity
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+
+    // info.update(layer.feature.properties);    
+}
+
+
 function resetHighlight(e) {
     geojson1.resetStyle(e.target);
     info.update();
@@ -240,7 +261,7 @@ function onEachFeature(feature, layer) {
 }
 
 geojson = L.geoJson(statesData, {
-    style: style,
+    // style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
 
