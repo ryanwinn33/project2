@@ -261,7 +261,7 @@ function onEachFeature(feature, layer) {
 }
 
 geojson = L.geoJson(statesData, {
-    // style: style,
+    style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
 
