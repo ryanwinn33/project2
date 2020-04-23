@@ -23,18 +23,6 @@ var info;
 map.on("layeradd", function(event){
 
 
-
-    // When event is fired update chart 
-
-    // After chart is updated change a global variable to true or to the year
-
-
-
-    // console.log("I am showing what the event variable holds.");
-    // console.log(event);
-    // console.log("I am showing what the this keyword variable holds.");
-    // console.log(this);
-    // console.log("Does this work?");
 });
 
 /**
@@ -85,30 +73,10 @@ function yearlyData(year){
             }
         }
         ).addTo(map);
-    // Create a function to add interactivity with mouseover
-
-        // var info = L.control();
-
-        // info.onAdd = function (map) {
-        //     this.div = L.DomUtil.create('div', 'info');
-        //     this.update();
-        //     return this._div;
-        // };
-        // // Hover over a state to see the Total obligated cost and the Disaster Count
-        // info.update = function (props) {
-        //     this.div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
-        //         '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
-        //         '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
-        //         : 'Hover over a state');
-        // };
-
-        // info.addTo(map);
 
         layerBoolean = true;        
-
-
     });
-    // console.log(year);
+
 };
 // document = "mapping/index.html"
 
@@ -119,21 +87,7 @@ function yearlyData(year){
 window.onload = function () {
 
     yearlyData("2016");
-
-    // var DropdownList = document.getElementById("data_sources").value;
-    // var SelectedValue = DropdownList.value;
-
-    // if (SelectedValue = "2016")
-    // {year = 2016;}
-    // else if (SelectedValue = "2017")
-    // {year = 2017;}
-    // else if (SelectedValue = "2018")
-    // {year = 2018;}
-    // else
-    // {year = 2019;}
 }
-
-// var year = 2017
 
 /**
  * This function will color the choropleth all pretty and shtuff.
@@ -154,10 +108,6 @@ function getColor(name, apidata, year) {
         console.log("this is a number skipping value");
         return;
     }
-
-    //first loop through each year
-
-    // then loop through each state
 
     var dollars = 0;
 
@@ -230,7 +180,7 @@ function highlightFeature(e) {
         layer.bringToFront();
     }
 
-    // info.update(layer.feature.properties);    
+   
 }
 
 
@@ -264,36 +214,3 @@ geojson = L.geoJson(statesData, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
-
-// Legend
-// var legend = L.control({position: 'bottomright'});
-
-// legend.onAdd = function (map) {
-//     var div = L.DomUtil.create('div', 'info legend');
-//         var grades = [100000, 1000000, 5000000 , 10000000, 40000000, 60000000, 100000000];
-//         var colors = ['#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
-//         var labels = [];
-//         // from, to;
-//         var legendInfo = "<h1>Median Income</h1>" +
-//         "<div class=\"labels\">" +
-//           "<div class=\"min\">" + grades[0] + "</div>" +
-//           "<div class=\"max\">" + grades[grades.length - 1] + "</div>" +
-//         "</div>";
-
-//         div.innerHTML = legendInfo;
-
-//         limits.forEach(function(grade, index) {
-//             labels.push('<i style="background:' + colors[index] + "\"></li>");
-//         });
-//     // for (var i = 0; i < grades.length; i++) {
-//     //     from = grades[i];
-//     //     to = grades[i + 1];
-//     //     labels.push(
-//             // '<i style="background:' + getColor(from + 1) + '"></i> ' +
-//             // from + (to ? '&ndash;' + to : '+'));
-//     // }
-
-//     div.innerHTML = labels.join('<br>');
-//     return div;
-// };
-// legend.addTo(map);
