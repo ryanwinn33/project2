@@ -19,6 +19,7 @@
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
   crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <!-- Leaflet-Choropleth JavaScript -->
   <script type="text/javascript" src="mapping/static/js/us-states.js"></script> 
 
@@ -72,22 +73,15 @@
                         <!-- change the function for Disaster selection -->
                         <select id="selDisaster" onchange="optionChanged(this.value)"></select>
                         <!-- JS -->
-                        <script type="text/javascript" src="charting/app.js"></script>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="container">
-                        <canvas id="myChart"></canvas>
+                        <!-- <div>
+                            <canvas id="myChart"></canvas>
+                            <script type="text/javascript" src="charting/app.js"></script>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script> -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src='charting/app.js'></script>
   
 
 </body>

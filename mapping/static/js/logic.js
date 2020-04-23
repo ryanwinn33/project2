@@ -85,24 +85,24 @@ function yearlyData(year){
             }
         }
         ).addTo(map);
-    // Create a function to add interactivity with mouseover
+    // // Create a function to add interactivity with mouseover
 
-        // var info = L.control();
+    //     var info = L.control();
 
-        // info.onAdd = function (map) {
-        //     this.div = L.DomUtil.create('div', 'info');
-        //     this.update();
-        //     return this._div;
-        // };
-        // // Hover over a state to see the Total obligated cost and the Disaster Count
-        // info.update = function (props) {
-        //     this.div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
-        //         '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
-        //         '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
-        //         : 'Hover over a state');
-        // };
+    //     info.onAdd = function (map) {
+    //         this.div = L.DomUtil.create('div', 'info');
+    //         this.update();
+    //         return this._div;
+    //     };
+    //     // Hover over a state to see the Total obligated cost and the Disaster Count
+    //     info.update = function (props) {
+    //         this.div.innerHTML = '<h4>Total Obligated Cost & Disaster Count</h4>' +  (props ?
+    //             '<b>' + statesData.name + '</b><br />' + props.Total + ' USD' +
+    //             '<b>' + '<h4>Disaster Count: </h4>' + props.Incident_Count //add variable for disaster count
+    //             : 'Hover over a state');
+    //     };
 
-        // info.addTo(map);
+    //     info.addTo(map);
 
         layerBoolean = true;        
 
