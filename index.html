@@ -69,21 +69,25 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12" id="chart">
-                        <h5>Select Disaster Type:</h5>
+                        <!-- <h5>Select Disaster Type:</h5>
                         <!-- change the function for Disaster selection -->
-                        <select id="selDisaster" onchange="optionChanged(this.value)"></select>
-                        <!-- JS -->
-                        <!-- <div>
-                            <canvas id="myChart"></canvas>
-                            <script type="text/javascript" src="charting/app.js"></script>
-                        </div> -->
+                        <!-- <select id="selDisaster" onchange="optionChanged(this.value)"></select>
+                        <script type="text/javascript" src="charting/app.js"></script>   -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <canvas id="myChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src='charting/app.js'></script>
+    
 </body>
 
 </html>
